@@ -101,9 +101,10 @@ are also nuisance parameters $\eta$.
 Before obtaining a specific dataset, plausibilities are modelled by the
 joint prior distribution
 \begin{align}
-p(\theta, \eta, D) &= p(\theta, \eta)p(D \given \theta, \eta)
+p(\theta, \eta, D) &= p(\theta, \eta)p(D \given \theta, \eta).
 \end{align}
-
+When a data proposition $D=D_0$ is found to be true, we hope that the
+marginal posterior $p(\theta \given D = D_0)$ is narrow.
 
 \end{block}
 
@@ -111,7 +112,14 @@ p(\theta, \eta, D) &= p(\theta, \eta)p(D \given \theta, \eta)
 %	MATERIALS
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Materials}
+\begin{block}{Preliminaries}
+The entropy of a question is the size of the set of statements
+that would not resolve it.
+
+
+When this formulation behaves counterintuitively, it is because our goals
+are not exactly in alignment with the hypothetical goal of answering the
+question `what is the value of $\theta$, precisely?'.
 
 \begin{columns} % Subdivide the first main column
 \begin{column}{.54\textwidth} % The first subdivided column within the first main column
