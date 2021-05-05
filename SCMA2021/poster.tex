@@ -31,6 +31,7 @@
 
 \usepackage{textcomp} % For texttildelow
 \newcommand{\textapprox}{\raisebox{0.5ex}{\texttildelow}}
+\newcommand{\given}{\,|\,}
 
 
 %\usepackage{times}\usefonttheme{professionalfonts}  % Uncomment to use Times as the main font
@@ -80,25 +81,29 @@
 %	OBJECTIVES
 %----------------------------------------------------------------------------------------
 
-\begin{block}{Objectives}
+%\begin{block}{Objectives}
 
-\begin{enumerate}
-\item Donec fringilla, velit id lobortis commodo, eros dui consectetur mi, ut interdum lorem dui sed mauris.
-\item Nulla ac nulla rhoncus est bibendum ullamcorper:
-\item Quisque vestibulum, nisl sit amet gravida ultricies dis parturient montes, nascetur ridiculus musobortis commodo, eros dui consectetur mi.
-\end{enumerate}
+%\begin{enumerate}
+%\item Donec fringilla, velit id lobortis commodo, eros dui consectetur mi, ut interdum lorem dui sed mauris.
+%\item Nulla ac nulla rhoncus est bibendum ullamcorper:
+%\item Quisque vestibulum, nisl sit amet gravida ultricies dis parturient montes, nascetur ridiculus musobortis commodo, eros dui consectetur mi.
+%\end{enumerate}
 
-\end{block}
+%\end{block}
 
-%----------------------------------------------------------------------------------------
+%%----------------------------------------------------------------------------------------
 %	INTRODUCTION
 %----------------------------------------------------------------------------------------
             
 \begin{block}{Introduction}
+Suppose we wish to learn about parameters $\theta$ from data $D$, and there
+are also nuisance parameters $\eta$.
+Before obtaining a specific dataset, plausibilities are modelled by the
+joint prior distribution
+\begin{align}
+p(\theta, \eta, D) &= p(\theta, \eta)p(D \given \theta, \eta)
+\end{align}
 
-\begin{itemize}
-\item Donec fringilla, velit id lobortis commodo, eros dui consectetur mi, ut interdum lorem dui sed mauris. Duis id sem nunc, a pharetra odio. Phasellus posuere \alert{semper massa}, id bibendum ligula tristique at. Integer sit amet vulputate turpis. Sed erat lacus, faucibus at viverra et, mattis nec sem. Cras faucibus \alert{scelerisque} cursus. Opet volutpat ligula. Duis semper lorem eget dui dignissim porttitor. Nulla facilisi. In ullamcorper lorem quis dolor iaculis nec egestas enim ultricies. Cras ut mauris elit, ut lacinia dui. Proin in ante et libero hendrerit iaculis. Nulla eu erat a urna laoreet auctor id a turpis. Nam mollis tristique neque eu luctus. Suspendisse rutrum congue nisi sed convallis. Aenean id neque dolor.
-\end{itemize}
 
 \end{block}
 
