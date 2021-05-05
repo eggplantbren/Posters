@@ -3,4 +3,4 @@ Posters
 
 (c) 2021 Brendon J. Brewer.
 
-LICENCE: [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
+LICENCE: [CC-BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).
