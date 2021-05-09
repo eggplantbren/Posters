@@ -28,6 +28,7 @@
 \usepackage[english]{babel} % English language/hyphenation
 
 \usepackage{amsmath,amsthm,amssymb,latexsym} % For including math equations, theorems, symbols, etc
+\usepackage{dsfont}
 
 \usepackage{textcomp} % For texttildelow
 \newcommand{\textapprox}{\raisebox{0.5ex}{\texttildelow}}
@@ -106,6 +107,12 @@ p(\theta, \eta, D) &= p(\theta, \eta)p(D \given \theta, \eta).
 When a data proposition $D=D_0$ is found to be true, we hope that the
 marginal posterior $p(\theta \given D = D_0)$ is narrow.
 
+If we want to design an informative experiment, we want
+$p(\theta \given D = D_0)$ to be narrow for `most' plausible datasets
+$D_0$. We can formalise this using information theory and decision theory
+to determine the most informative experiment, but this requires difficult
+integrals which until recently could not be evaluated.
+
 \end{block}
 
 %----------------------------------------------------------------------------------------
@@ -160,27 +167,16 @@ question `what is the value of $\theta$, precisely?'.
 %----------------------------------------------------------------------------------------
 
 \begin{block}{Methods}
-
-\begin{itemize}
-\item Maecenas Vel Nisl Elit
-\begin{itemize}
-\item Suspendisse potenti. Fusce a est eget turpis rhoncus varius sed sed dui. Cras justo nibh, bibendum a cursus eget, consequat et dui. Maecenas vel nisl elit, sed dignissim dolor. 
-\item In hac habitasse platea dictumst.
-\end{itemize}
-
-\item Viewpoint Matching Constraints
-\begin{itemize}
-\item Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. 
-\item Proin in nisi diam.
-\item Nam ultricies pellentesque nunc, ultrices volutpat nisl ultrices a.
-\end{itemize}
-
-\item Volutpat 
-\begin{itemize}
-\item Duis semper lorem eget dui dignissim porttitor.
-\item Nulla facilisi. In ullamcorper lorem quis dolor.
-\end{itemize}
-\end{itemize}
+Nested Sampling is often presented as a method for evaluating marginal
+likelihoods
+\begin{align}
+p(D_0) &= \int p(\theta)p(D_0 \given \theta) \, d\theta.
+\end{align}
+However, more fundamentally, it measures the `size' of small regions:
+\begin{align}
+X(L^*) &= \int \pi(x) \mathds{1}\left(L(x) > L^*\right) \, dx.
+\end{align}
+Marginal likelihoods are just one application.
 
 \end{block}
 
