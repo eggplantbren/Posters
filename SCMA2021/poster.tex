@@ -167,7 +167,7 @@ question `what is the value of $\theta$, precisely?'.
 %----------------------------------------------------------------------------------------
 
 \begin{block}{Methods}
-Nested Sampling is often presented as a method for evaluating marginal
+Nested Sampling (NS) is often presented as a method for evaluating marginal
 likelihoods
 \begin{align}
 p(D_0) &= \int p(\theta)p(D_0 \given \theta) \, d\theta.
@@ -177,6 +177,11 @@ However, more fundamentally, it measures the `size' of small regions:
 X(L^*) &= \int \pi(x) \mathds{1}\left(L(x) > L^*\right) \, dx.
 \end{align}
 Marginal likelihoods are just one application.
+
+In 2017, \citep{brewer}~used NS to compute the Shannon entropy of any
+distribution which is `explorable', in the sense that it can be explored
+by Markov Chain Monte Carlo (MCMC). A common example is a marginal
+posterior distribution.
 
 \end{block}
 
@@ -292,7 +297,8 @@ An implementation in C++ and Python is available at
 
 \begin{block}{Acknowledgments}
 It is a pleasure to thank Kevin Knuth (SUNY Albany),
-John Skilling (John Skilling), and Joshua Dawes (Auckland) for helpful
+John Skilling (John Skilling), Ariel Caticha (SUNY Albany),
+and Joshua Dawes (Auckland) for helpful
 conversations. This project received funding from the Faculty Research
 and Development Fund of the University of Auckland.
 
